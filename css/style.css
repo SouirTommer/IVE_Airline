@@ -85,5 +85,16 @@ ul{
 }
 
 .list-items:hover{
-    background-color: white;
+    background-color: rgb(217, 238, 250);
+}
+
+input[type="date"][disabled]{
+    background-color: rgb(165, 165, 165);
+}
+
+
+option{
+    width:100%;
+    background-color: rgb(227, 227, 227);
+    border-radius: 0 0 5px 5px;
 }
