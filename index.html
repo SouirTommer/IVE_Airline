@@ -206,7 +206,17 @@
             document.getElementsByName("Rdatepicker")[0]
                 .setAttribute('min', tomorrow);
             // end
-            
+
+            $("#departDate").click(function () {
+                var futureblockdate = document.getElementById("returnDate").value;
+
+                var fbd = new Date(futureblockdate);
+                fbd.setDate(fbd.getDate() - 1);
+                fbd = fbd.toISOString().split('T')[0];
+                document.getElementsByName("Ddatepicker")[0]
+                    .setAttribute('max', fbd);
+            })
+
         });
     </script>
 </body>
