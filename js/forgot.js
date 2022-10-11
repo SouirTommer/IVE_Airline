@@ -21,7 +21,7 @@ $(document).ready(function() {
             }
 
             if(correct == true){
-                alert("We have send an email. Please check!");
+                alert("A password reset request has been emailed to you. Please follow the instructions in that email.");
                 
                 location.href = 'resetPwd.html';
             }
