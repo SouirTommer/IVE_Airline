@@ -63,7 +63,7 @@ $(document).ready(function () {
         }
     });
     //end
-    
+
     //disable past date on datepicker
     var today = new Date().toISOString().split('T')[0];
     document.getElementsByName("Ddatepicker")[0]
@@ -78,6 +78,11 @@ $(document).ready(function () {
 
     $("#departDate").click(function () {
         var futureblockdate = document.getElementById("returnDate").value;
+        if (futureblockdate == ""){
+            document.getElementsByName("Ddatepicker")[0]
+            .setAttribute('max', new Date(today)+365)
+            return;
+        } 
         var fbd = new Date(futureblockdate);
         fbd.setDate(fbd.getDate() - 1);
         fbd = fbd.toISOString().split('T')[0];
@@ -85,7 +90,24 @@ $(document).ready(function () {
             .setAttribute('max', fbd);
     })
 
+    $("#returnDate").click(function () {
+        var pastblockdate = document.getElementById("departDate").value;
+        if (pastblockdate == ""){
+            document.getElementsByName("Rdatepicker")[0]
+            .setAttribute('min', tomorrow)
+            return;
+        } 
+        var pbd = new Date(pastblockdate);
+        pbd.setDate(pbd.getDate()+1);
+        pbd = pbd.toISOString().split('T')[0];
+        document.getElementsByName("Rdatepicker")[0]
+            .setAttribute('min', pbd);
+    })
+
 });
+
+
+
 // input.addEventListener("keydown", (e) => {
 //     if (e.key == 'Enter') {
 //         return;

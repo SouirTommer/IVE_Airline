@@ -1,14 +1,13 @@
 {
-    "account": [
-      {
-        "username": "Admin",
-        "email": "Admin",
-        "password": "Admin"
-      },
-      {
-        "username": "root",
-        "email": "root@gmail.com",
-        "password": "root"
-      }
-    ]
+  "account": [{
+      "username": "Admin",
+      "email": "Admin",
+      "password": "Admin"
+    },
+    {
+      "username": "root",
+      "email": "root@gmail.com",
+      "password": "root"
+    }
+  ]
 }
