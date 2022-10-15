@@ -717,6 +717,16 @@ var PVG = [{
 
 var search_result;
 
+
+function clickSearch() {
+
+    localStorage.setItem("departure", get_depart());
+    localStorage.setItem("arrival", get_arrival());
+    localStorage.setItem("departDate", get_departdate());
+    localStorage.setItem("returnDate", get_returndate());
+
+    window.location.href = "search_result.html";
+}
 //return depart airport in full name string eg "Hong Kong Intl (HKG)"
 function get_depart() {
     var airport_code = document.getElementById("from-flight-input-autocomplete").value;
@@ -754,56 +764,59 @@ function get_returndate() {
     return document.getElementById("returnDate").value;
 }
 
+var return_result;
+var depart_result;
 
 function search_flight() {
     //To function
-    var arrival_airport = get_arrival();
-    var departdate = get_departdate();
-    if (get_depart() == "HKG") {
+    var arrival_airport = localStorage.getItem("arrival")
+    var departdate = localStorage.getItem("departDate")
+    if (localStorage.getItem("departure") == "HKG") {
         search_result = HKG.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
         // search_result = search_result.filter((x => x.destination == arrival_airport));
-    } else if (get_depart() == "PVG") {
+    } else if (localStorage.getItem("departure") == "PVG") {
         search_result = PVG.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
-    } else if (get_depart() == "TPE") {
+    } else if (localStorage.getItem("departure") == "TPE") {
         search_result = TPE.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
-    } else if (get_depart() == "KIX") {
+    } else if (localStorage.getItem("departure") == "KIX") {
         search_result = KIX.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
     }
     var departstr = JSON.stringify(search_result, null, 4);
     alert(departstr);
+    depart_result = search_result;
 
     //From function
-    arrival_airport = get_depart();
-    departdate = get_returndate();
-    if (get_arrival() == "HKG") {
+    arrival_airport = localStorage.getItem("departure")
+    departdate = localStorage.getItem("returnDate")
+    if (localStorage.getItem("arrival") == "HKG") {
         search_result = HKG.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
-    } else if (get_arrival() == "PVG") {
+    } else if (localStorage.getItem("arrival") == "PVG") {
         search_result = PVG.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
-    } else if (get_arrival() == "TPE") {
+    } else if (localStorage.getItem("arrival") == "TPE") {
         search_result = TPE.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
-    } else if (get_arrival() == "KIX") {
+    } else if (localStorage.getItem("arrival") == "KIX") {
         search_result = KIX.filter(x => {
             return x.date == departdate && x.destination == arrival_airport
         });
     }
     var returnstr = JSON.stringify(search_result, null, 4);
     alert(returnstr);
+    return_result = search_result;
 
-    window.location.href = "search_result.html";
 }
 
 //end of search engine
