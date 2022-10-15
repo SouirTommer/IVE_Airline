@@ -352,19 +352,27 @@ var PVG = [{
         firstclass_sold_seat: 0
     }
 ]
-var search_result;
 
+var search_result;
 
 //return depart airport in full name string eg "Hong Kong Intl (HKG)"
 function get_depart() {
-    var airport_code = document.getElementById("from-flight-input-autocomplete").value
+    var airport_code = document.getElementById("from-flight-input-autocomplete").value;
+    if (airport_code == "Hong Kong Intl (HKG)")
+        airport_code = "HKG";
+    if (airport_code == "Osaka Kansai International (KIX)")
+        airport_code = "KIX";
+    if (airport_code == "Taipei Taiwan Taoyuan (TPE)")
+        airport_code = "TPE";
+    if (airport_code == "Shanghai Pu Dong (PVG)")
+        airport_code = "PVG";
     return airport_code;
 }
 
 
 //return arrival airport in code name eg "HKG"
 function get_arrival() {
-    var airport_code = document.getElementById("to-flight-input-autocomplete").value
+    var airport_code = document.getElementById("to-flight-input-autocomplete").value;
     if (airport_code == "Hong Kong Intl (HKG)")
         airport_code = "HKG";
     if (airport_code == "Osaka Kansai International (KIX)")
@@ -380,24 +388,42 @@ function get_departdate() {
     return document.getElementById("departDate").value;
 }
 
-function get_arrivaldate(){
-    return docement.getElementById("returnDate").value;
+function get_returndate(){
+    return document.getElementById("returnDate").value;
 }
 
+
 function search_flight() {
-    arrival_airport = get_arrival();
-    departdate = get_departdate();
-    if (get_depart() == "Hong Kong Intl (HKG)") {
-        search_result = HKG.filter((x => x.date == departdate) && (x => x.destination == arrival_airport));
-    } else if (get_depart() == "Shanghai Pu Dong (PVG)") {
-        search_result = PVG.filter((x => x.date == departdate) && (x => x.destination == arrival_airport));
-    } else if (get_depart() == "Taipei Taiwan Taoyuan (TPE)") {
-        search_result = TPE.filter((x => x.date == departdate) && (x => x.destination == arrival_airport));
-    } else if (get_depart() == "Osaka Kansai International (KIX)") {
-        search_result = KIX.filter((x => x.date == departdate) && (x => x.destination == arrival_airport));
+    //To function
+    var arrival_airport = get_arrival();
+    var departdate = get_departdate();
+    if (get_depart() == "HKG") {
+        search_result = HKG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        // search_result = search_result.filter((x => x.destination == arrival_airport));
+    } else if (get_depart() == "PVG") {
+        search_result = PVG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+    } else if (get_depart() == "TPE") {
+        search_result = TPE.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+    } else if (get_depart() == "KIX") {
+        search_result = KIX.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
     }
-    var str = JSON.stringify(search_result, null, 4);
-    alert(str);
+    var departstr = JSON.stringify(search_result, null, 4);
+    alert(departstr);
+
+    //From function
+    arrival_airport = get_depart();
+    departdate = get_returndate();
+    if (get_arrival() == "HKG") {
+        search_result = HKG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+    } else if (get_arrival() == "PVG") {
+        search_result = PVG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+    } else if (get_arrival() == "TPE") {
+        search_result = TPE.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+    } else if (get_arrival() == "KIX") {
+        search_result = KIX.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+    }
+    var returnstr = JSON.stringify(search_result, null, 4);
+    alert(returnstr);
 }
 
 
