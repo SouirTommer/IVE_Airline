@@ -1,17 +1,15 @@
 {
-    "Hong Kong Intl (HKG)": [{
-            "flight_no": "HK00001",
-            "destination": "Shanghai Pu Dong (PVG)",
-            "date":""
-
+    "Hong Kong Intl (HKG)" [{
+            "flight_no":"HK00001",
+            "destination":"Shanghai Pu Dong (PVG)"
         },
         {
-            "flight_no": "HK00002",
-            "destination": "Osaka Kansai International (KIX)"
+            "flight_no":"HK00002",
+            "destination":"Osaka Kansai International (KIX)"
         },
         {
-            "flight_no": "HK00003",
-            "destination": "Taipei Taiwan Taoyuan (TPE)"
+            "flight_no":"HK00003",
+            "destination":"Taipei Taiwan Taoyuan (TPE)"
         }
 
     ]
