@@ -85,6 +85,97 @@ var HKG = [{
         business_sold_seat: 0,
         firstclass_seat: 10,
         firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "HKG007",
+        destination: "KIX",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "HKG008",
+        destination: "KIX",
+        date: "2022-10-27",
+        depart_time: "20:00",
+        arrival_time: "23:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+
+    {
+        flight_no: "HKG009",
+        destination: "PVG",
+        date: "2022-10-27",
+        depart_time: "08:00",
+        arrival_time: "12:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "HKG010",
+        destination: "PVG",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "HKG011",
+        destination: "TPE",
+        date: "2022-10-27",
+        depart_time: "12:00",
+        arrival_time: "14:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "HKG012",
+        destination: "TPE",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
     }
 
 ]
@@ -166,6 +257,96 @@ var KIX = [{
         date: "2022-10-20",
         depart_time: "16:00",
         arrival_time: "20:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "KIX007",
+        destination: "HKG",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "KIX008",
+        destination: "HKG",
+        date: "2022-10-27",
+        depart_time: "20:00",
+        arrival_time: "23:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "KIX009",
+        destination: "PVG",
+        date: "2022-10-27",
+        depart_time: "08:00",
+        arrival_time: "12:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "KIX010",
+        destination: "PVG",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "KIX011",
+        destination: "TPE",
+        date: "2022-10-27",
+        depart_time: "12:00",
+        arrival_time: "14:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "KIX012",
+        destination: "TPE",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
         seat_capacity: 200,
         sold_seat: 0,
         economy_seat: 150,
@@ -262,6 +443,96 @@ var TPE = [{
         business_sold_seat: 0,
         firstclass_seat: 10,
         firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "TPE007",
+        destination: "HKG",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "TPE008",
+        destination: "HKG",
+        date: "2022-10-27",
+        depart_time: "20:00",
+        arrival_time: "23:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "TPE009",
+        destination: "PVG",
+        date: "2022-10-27",
+        depart_time: "08:00",
+        arrival_time: "12:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "TPE010",
+        destination: "PVG",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "TPE011",
+        destination: "KIX",
+        date: "2022-10-27",
+        depart_time: "12:00",
+        arrival_time: "14:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "TPE012",
+        destination: "KIX",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
     }
 ]
 
@@ -350,6 +621,96 @@ var PVG = [{
         business_sold_seat: 0,
         firstclass_seat: 10,
         firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "PVG007",
+        destination: "HKG",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "PVG008",
+        destination: "HKG",
+        date: "2022-10-27",
+        depart_time: "20:00",
+        arrival_time: "23:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "PVG009",
+        destination: "TPE",
+        date: "2022-10-27",
+        depart_time: "08:00",
+        arrival_time: "12:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "PVG010",
+        destination: "TPE",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "PVG011",
+        destination: "KIX",
+        date: "2022-10-27",
+        depart_time: "12:00",
+        arrival_time: "14:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
+    },
+    {
+        flight_no: "PVG012",
+        destination: "KIX",
+        date: "2022-10-27",
+        depart_time: "16:00",
+        arrival_time: "21:00",
+        seat_capacity: 200,
+        sold_seat: 0,
+        economy_seat: 150,
+        economy_sold_seat: 0,
+        business_seat: 40,
+        business_sold_seat: 0,
+        firstclass_seat: 10,
+        firstclass_sold_seat: 0
     }
 ]
 
@@ -388,7 +749,7 @@ function get_departdate() {
     return document.getElementById("departDate").value;
 }
 
-function get_returndate(){
+function get_returndate() {
     return document.getElementById("returnDate").value;
 }
 
@@ -398,14 +759,22 @@ function search_flight() {
     var arrival_airport = get_arrival();
     var departdate = get_departdate();
     if (get_depart() == "HKG") {
-        search_result = HKG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = HKG.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
         // search_result = search_result.filter((x => x.destination == arrival_airport));
     } else if (get_depart() == "PVG") {
-        search_result = PVG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = PVG.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     } else if (get_depart() == "TPE") {
-        search_result = TPE.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = TPE.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     } else if (get_depart() == "KIX") {
-        search_result = KIX.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = KIX.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     }
     var departstr = JSON.stringify(search_result, null, 4);
     alert(departstr);
@@ -414,17 +783,27 @@ function search_flight() {
     arrival_airport = get_depart();
     departdate = get_returndate();
     if (get_arrival() == "HKG") {
-        search_result = HKG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = HKG.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     } else if (get_arrival() == "PVG") {
-        search_result = PVG.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = PVG.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     } else if (get_arrival() == "TPE") {
-        search_result = TPE.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = TPE.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     } else if (get_arrival() == "KIX") {
-        search_result = KIX.filter (x => {return x.date == departdate && x.destination == arrival_airport} );
+        search_result = KIX.filter(x => {
+            return x.date == departdate && x.destination == arrival_airport
+        });
     }
     var returnstr = JSON.stringify(search_result, null, 4);
     alert(returnstr);
 }
+
+//end of search engine
 
 
 //input script
