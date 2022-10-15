@@ -354,6 +354,15 @@ var PVG = [{
 ]
 var search_result;
 
+
+//return depart airport in full name string eg "Hong Kong Intl (HKG)"
+function get_depart() {
+    var airport_code = document.getElementById("from-flight-input-autocomplete").value
+    return airport_code;
+}
+
+
+//return arrival airport in code name eg "HKG"
 function get_arrival() {
     var airport_code = document.getElementById("to-flight-input-autocomplete").value
     if (airport_code == "Hong Kong Intl (HKG)")
@@ -367,13 +376,12 @@ function get_arrival() {
     return airport_code;
 }
 
-function get_depart() {
-    var airport_code = document.getElementById("from-flight-input-autocomplete").value
-    return airport_code;
-}
-
 function get_departdate() {
     return document.getElementById("departDate").value;
+}
+
+function get_arrivaldate(){
+    return docement.getElementById("returnDate").value;
 }
 
 function search_flight() {
@@ -391,8 +399,6 @@ function search_flight() {
     var str = JSON.stringify(search_result, null, 4);
     alert(str);
 }
-
-
 
 
 //input script
