@@ -714,6 +714,7 @@ var PVG = [{
     }
 ]
 
+
 var search_result;
 
 //return depart airport in full name string eg "Hong Kong Intl (HKG)"
@@ -801,6 +802,8 @@ function search_flight() {
     }
     var returnstr = JSON.stringify(search_result, null, 4);
     alert(returnstr);
+
+    window.location.href = "search_result.html";
 }
 
 //end of search engine
@@ -885,6 +888,7 @@ $(document).ready(function () {
         .setAttribute('min', tomorrow);
     // end
 
+
     // when a return date is picked first, set the max selectable date in depart datepicker
     $("#departDate").click(function () {
         var futureblockdate = document.getElementById("returnDate").value;
@@ -898,7 +902,7 @@ $(document).ready(function () {
         fbd = fbd.toISOString().split('T')[0];
         document.getElementsByName("Ddatepicker")[0]
             .setAttribute('max', fbd);
-    })
+    });
 
     //when a depart date is picked first, set the min selectable date in return datepicker
     $("#returnDate").click(function () {
@@ -913,6 +917,6 @@ $(document).ready(function () {
         pbd = pbd.toISOString().split('T')[0];
         document.getElementsByName("Rdatepicker")[0]
             .setAttribute('min', pbd);
-    })
+    });
 
 });

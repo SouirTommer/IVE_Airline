@@ -1,9 +1,4 @@
 
-
-
-
-
-
 // Useless code for later review might be useful later....
 // input.addEventListener("keydown", (e) => {
 //     if (e.key == 'Enter') {
