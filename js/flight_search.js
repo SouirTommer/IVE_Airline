@@ -823,20 +823,15 @@ function search_flight() {
 
 //Start of Data fetching
 
-function LoadData() {
-    document.getElementById('dataloader').innerHTML = "<div class='fade card shadow p-3 mb-5 bg-body rounded' style='height:22vh;margin-top: 10px;'><div class='card-body text-center'><!-- <div class='searching_label'><img src='img/plane_loader.gif' alt=''style='padding-top:20px'></div> --><div class='d-flex bd-highlight align-items-center justify-content-center'><div id='flight_no' style='display: none;'></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>9:00 <br><p class='fs-4 text' style='color: gray;'>HKG</p></p></div><div class='p-2 flex-grow-1 bd-highlight'><p style='margin: 0;'>4hr</p><hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i class='fa-solid fa-plane'></i><p class='text-succes'>Direct</p></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>14:00 <br><p class='fs-4 text' style='color: gray;'>KIX</p></p></div><div class='p-2 flex-grow bd-highlight'><button type='button' class='btn btn-success btn-lg'style='padding-left:30px;padding-right:30px;'>Select &nbsp&nbsp<iclass='fa-solid fa-arrow-right'></i></button></div></div></div></div>"
-}
+// function LoadData() {
+//     document.getElementById('dataloader').innerHTML = "<div class='fade card shadow p-3 mb-5 bg-body rounded' style='height:22vh;margin-top: 10px;'><div class='card-body text-center'><!-- <div class='searching_label'><img src='img/plane_loader.gif' alt=''style='padding-top:20px'></div> --><div class='d-flex bd-highlight align-items-center justify-content-center'><div id='flight_no' style='display: none;'></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>9:00 <br><p class='fs-4 text' style='color: gray;'>HKG</p></p></div><div class='p-2 flex-grow-1 bd-highlight'><p style='margin: 0;'>4hr</p><hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i class='fa-solid fa-plane'></i><p class='text-succes'>Direct</p></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>14:00 <br><p class='fs-4 text' style='color: gray;'>KIX</p></p></div><div class='p-2 flex-grow bd-highlight'><button type='button' class='btn btn-success btn-lg'style='padding-left:30px;padding-right:30px;'>Select &nbsp&nbsp<iclass='fa-solid fa-arrow-right'></i></button></div></div></div></div>"
+// }
 
-function AddData() {
-    document.getElementById('dataloader').innerHTML += "<div class='fade card shadow p-3 mb-5 bg-body rounded' style='height:22vh;margin-top: 10px;'><div class='card-body text-center'><!-- <div class='searching_label'><img src='img/plane_loader.gif' alt=''style='padding-top:20px'></div> --><div class='d-flex bd-highlight align-items-center justify-content-center'><div id='flight_no' style='display: none;'></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>9:00 <br><p class='fs-4 text' style='color: gray;'>HKG</p></p></div><div class='p-2 flex-grow-1 bd-highlight'><p style='margin: 0;'>4hr</p><hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i class='fa-solid fa-plane'></i><p class='text-succes'>Direct</p></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>14:00 <br><p class='fs-4 text' style='color: gray;'>KIX</p></p></div><div class='p-2 flex-grow bd-highlight'><button type='button' class='btn btn-success btn-lg'style='padding-left:30px;padding-right:30px;'>Select &nbsp&nbsp<iclass='fa-solid fa-arrow-right'></i></button></div></div></div></div>"
-}
+// function AddData() {
+//     document.getElementById('dataloader').innerHTML += "<div class='fade card shadow p-3 mb-5 bg-body rounded' style='height:22vh;margin-top: 10px;'><div class='card-body text-center'><!-- <div class='searching_label'><img src='img/plane_loader.gif' alt=''style='padding-top:20px'></div> --><div class='d-flex bd-highlight align-items-center justify-content-center'><div id='flight_no' style='display: none;'></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>9:00 <br><p class='fs-4 text' style='color: gray;'>HKG</p></p></div><div class='p-2 flex-grow-1 bd-highlight'><p style='margin: 0;'>4hr</p><hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i class='fa-solid fa-plane'></i><p class='text-succes'>Direct</p></div><div class='p-2 flex-grow-1 bd-highlight'><p class='fs-2 text' style='margin: 0;'>14:00 <br><p class='fs-4 text' style='color: gray;'>KIX</p></p></div><div class='p-2 flex-grow bd-highlight'><button type='button' class='btn btn-success btn-lg'style='padding-left:30px;padding-right:30px;'>Select &nbsp&nbsp<iclass='fa-solid fa-arrow-right'></i></button></div></div></div></div>"
+// }
+//useless now 
 
-function fadein(){
-    var card_len = document.getElementsByClassName('fade').length;
-    for(let i =0; i<card_len;i++){
-        document.getElementsByClassName('fade')[i].style.opacity = "1";
-    }
-}
 
 
 // end of data fetching

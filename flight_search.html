@@ -14,6 +14,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a178411011.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cloud2.css">
     <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
     <link rel="stylesheet" href="jslib/jquery-ui-1.13.2/jquery-ui.css">
     <link rel="stylesheet" href="jslib/jquery-ui-1.13.2/jquery-ui.structure.css">
@@ -28,103 +29,113 @@
     <span class="loader">
         <span class="loader-inner"></span>
     </span>
+    
+    <div id="clouds">
+        <div class="cloud x1"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+    </div>
+    <nav class="row navbar">
+        <div class="container-fluid justify-content-center">
+          <a class="navbar-brand" href="#">
+            <img src="img/logo.png" alt="Bootstrap" width="auto" height="75">
+          </a>
+      </nav>
+    
+    <div id="cloudback" class="container-fluid text-center" style="background-color: #c9dbe9; padding :20px; ">
 
-    <div class="container-fluid">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-7 text-center" style="background:white; height: 100px;">
-                <div class="item">
-                    <img src="img/logo-placeholder.png" class="rounded" alt="" style="height: 70px;">
-                </div>
 
+        <div class="row" style="height:auto;">
+            <div class="col-md-12 text-center"
+                style="background-color: transparent;z-index: 1; height: 10vh;top: 100%;">
+                <p class="display-3" id="headtext">Start Your Trip Now!</p>
             </div>
-            <div class="col-5 text-center " style="background:white; height: 100px; ">
-                <div class="item">
-                    <button id="login" type="button" class="btn btn-primary">
-                        Login
-                    </button>
-                </div>
+
+            <div class="col">
             </div>
-            <div class="d-flex p-2 justify-content-center" id="banner" style="background-image:url('img/banner.jpg');">
-                <div class="p-2">
-                    <div id="titlebox">
-                        <h1 id="headtext">Start Your Trip Now!</h1>
-                    </div>
-                    <div class="row ">
-                        <div class="p-2" id="searchbox">
-                            <div class="item" id='radio-flight'>
-                                <input class="form-check-input" type="radio" name="method" id="return">
-                                <span class="flight-type">Return</span>
-                                </input>
-                                <input class="form-check-input" type="radio" name="method" id="oneway">
-                                <span class="flight-type">One-Way</span>
-                                </input>
-                            </div>
-                            <div class="row"
-                                style="padding-left:10px;padding-top:5px;padding-right:10px;font-size: small;">
-                                <span class="col-3" style="color:white">From</span>
-                                <span class="col-3" style="color:white">To</span>
-                                <span class="col-3" style="color:white">Depart</span>
-                                <span class="col-3" style="color:white">Return</span>
-                            </div>
 
-                            <div class="row" style="padding-left:10px;padding-right:10px">
-                                <div class="input-group col-12">
+            <div id='dataloader' class="col-md-8" style="padding-top:18vh;">
 
-                                    <form class="col-3" action="#" onsubmit="return input1enter()" autocomplete="off"
-                                        style="position:relative">
-                                        <div id="input1">
-                                            <input type="text" id="from-flight-input-autocomplete" aria-label="from"
-                                                class="form-control basicAutoComplete" placeholder="Departure Airport"
-                                                style="border-radius: 5px 0px 0px 5px;" list="airportList">
-                                            </input>
-                                        </div>
+                <div class="row text-start">
+                    <div class="p-2" id="searchbox">
+                        <div class="item" id='radio-flight'>
+                            <input class="form-check-input" type="radio" name="method" id="return">
+                            <span class="flight-type">Return</span>
+                            </input>
+                            <input class="form-check-input" type="radio" name="method" id="oneway">
+                            <span class="flight-type">One-Way</span>
+                            </input>
+                        </div>
+                        <div class="row" style="padding-left:10px;padding-top:5px;padding-right:10px;font-size: small;">
+                            <span class="col-3" style="color:white">From</span>
+                            <span class="col-3" style="color:white">To</span>
+                            <span class="col-3" style="color:white">Depart</span>
+                            <span class="col-3" style="color:white">Return</span>
+                        </div>
 
-                                        <ul class=" list" id="fromlist"></ul>
-                                    </form>
+                        <div class="row" style="padding-left:10px;padding-right:10px">
+                            <div class="input-group col-12">
 
-                                    <form class="col-3" action="#" onsubmit="return input2enter()" autocomplete="off"
-                                        style="position:relative">
-                                        <div id="input2">
-                                            <input type="text" id="to-flight-input-autocomplete" aria-label="to"
-                                                class="form-control basicAutoComplete" placeholder="Arrival Airport"
-                                                style="border-radius: 0px;">
-                                        </div>
-                                        <ul class="list" id="tolist"></ul>
-                                    </form>
+                                <form class="col-3" action="#" onsubmit="return input1enter()" autocomplete="off"
+                                    style="position:relative">
+                                    <div id="input1">
+                                        <input type="text" id="from-flight-input-autocomplete" aria-label="from"
+                                            class="form-control basicAutoComplete" placeholder="Departure Airport"
+                                            style="border-radius: 5px 0px 0px 5px;" list="airportList">
+                                        </input>
+                                    </div>
 
-                                    <div class="col-3"><input id="departDate" data-provide="datepicker" type="date"
-                                            aria-label="depart" name="Ddatepicker" class="form-control"
+                                    <ul class=" list" id="fromlist"></ul>
+                                </form>
+
+                                <form class="col-3" action="#" onsubmit="return input2enter()" autocomplete="off"
+                                    style="position:relative">
+                                    <div id="input2">
+                                        <input type="text" id="to-flight-input-autocomplete" aria-label="to"
+                                            class="form-control basicAutoComplete" placeholder="Arrival Airport"
                                             style="border-radius: 0px;">
                                     </div>
-                                    <div class="col-3"><input id="returnDate" data-provide="datepicker" type="date"
-                                            aria-label="return" name="Rdatepicker" class="form-control"
-                                            style="border-radius: 0px 5px 5px 0px;">
-                                    </div>
+                                    <ul class="list" id="tolist"></ul>
+                                </form>
 
+                                <div class="col-3"><input id="departDate" data-provide="datepicker" type="date"
+                                        aria-label="depart" name="Ddatepicker" class="form-control"
+                                        style="border-radius: 0px;">
                                 </div>
+                                <div class="col-3"><input id="returnDate" data-provide="datepicker" type="date"
+                                        aria-label="return" name="Rdatepicker" class="form-control"
+                                        style="border-radius: 0px 5px 5px 0px;">
+                                </div>
+
                             </div>
-                            <div class="row  justify-content-end">
-                                <div class="col-12 text-end" style="padding-top:12px ;padding-right:30px">
-                                    <div class="items" id="flight-search">
-                                        <button type="button" class="btn btn-success" stlye=""
-                                            onclick="clickSearch()">Search flights<i class="fa-solid fa-arrow-right"
-                                                style="padding-left:10px"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="col-12 text-end" style="padding-top:4vh ;padding-right:30px; padding-bottom :4vh;">
+                            <div class="items" id="flight-search">
+                                <button type="button" class="btn btn-success" onclick="clickSearch()">Search flights<i
+                                        class="fa-solid fa-arrow-right" style="padding-left:10px"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row fixed-bottom" style="width:100vmax;margin: 0;padding: 0; border: 0;">
+            <div class="col">
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- <div class="row fixed-bottom" style="width:100vmax;margin: 0;padding: 0; border: 0;">
                 <div class=" text-center text-white p-4" style="background-color: #29374e;">
                     © 2022 Copyright:
                     <a class="text-white" href="">Airline.inc</a>
                 </div>
-            </div>
+            </div> -->
 
-        </div>
+    </div>
     </div>
 
     <script src="js/flight_search.js"></script>

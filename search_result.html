@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Airline | Book Your Flight Ticket Now!</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -14,6 +14,7 @@
     <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
     <link rel="stylesheet" href="css/pagestyle.css" />
     <link rel="stylesheet" href="css/search_result.css" />
+    <link rel="stylesheet" href="css/cloud.css" />
     <script src="js/effect.js"></script>
     <script src="js/flight_search.js"></script>
 </head>
@@ -27,7 +28,7 @@
     <nav class="navbar bg-light">
         <div class="container justify-content-center" style="height:10vh">
             <a class="navbar-brand" href="#">
-                <img src="img/logo-placeholder.png" alt="Bootstrap" width="auto" height="75">
+                <img src="img/logo.png" alt="Bootstrap" width="auto" height="75">
             </a>
         </div>
     </nav>
@@ -38,77 +39,127 @@
         </div>
     </nav>
 
-    <div class="container-fluid text-center" style="background-color: rgb(233, 233, 233); padding:0 ; ">
+    <div id="cloudback" class="container-fluid text-center" style="background-color: #c9dbe9; padding:0 ; ">
         <div class="row" style="height:auto;">
+            <div id="clouds">
+                <div class="cloud x1"></div>
+                <div class="cloud x2"></div>
+                <div class="cloud x3"></div>
+                <div class="cloud x4"></div>
+                <div class="cloud x5"></div>
+            </div>
             <div class="col">
 
             </div>
-            <div id='dataloader' class="col-md-7" style="padding-top:25px;">
+            <div id='dataloader' class="col-md-5" style="padding-top:15px;">
 
-                <div class="progress" id="bar">
+                <!-- <div class="progress" id="bar">
 
                     <div class="progress-bar progress-bar progress-bar-animated " role="progressbar"
                         aria-label="Animated striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"
                         style="width: 0%;" id="search-progress"></div>
 
-                </div>
-                <!-- This block is to show data -->
-
-                <!-- <div class='card shadow p-3 mb-5 bg-body rounded' style='height:22vh;margin-top: 10px;'>
-                    <div class='card-body text-center'>
-                        <div class="searching_label">
-                            <img src="img/plane_loader.gif" alt=""style="padding-top:20px">
-                        </div>
-
-                        <div class='d-flex bd-highlight align-items-center justify-content-center'>
-                            <div id='flight_no' style='display: none;'></div>
-                            <div class='p-2 flex-grow-1 bd-highlight'>
-                                <p class='fs-2 text' style='margin: 0;'>9:00 <br>
-                                    <p class='fs-4 text' style='color: gray;'>HKG</p>
-                                </p>
-                            </div>
-                            <div class='p-2 flex-grow-1 bd-highlight'>
-                                <p style='margin: 0;'>4hr</p>
-
-                                <hr class='border border-primary border-3 opacity-50' style='margin:5px ;'>
-                                <i class='fa-solid fa-plane'></i>
-
-                                <p class='text-succes'>Direct</p>
-                            </div>
-                            <div class='p-2 flex-grow-1 bd-highlight'>
-                                <p class='fs-2 text' style='margin: 0;'>14:00 <br>
-                                    <p class='fs-4 text' style='color: gray;'>KIX</p>
-                                </p>
-                            </div>
-                            <div class='p-2 flex-grow bd-highlight'>
-                                <button type='button' class='btn btn-success btn-lg'
-                                    style='padding-left:30px;padding-right:30px;'>Select &nbsp&nbsp<i
-                                        class='fa-solid fa-arrow-right'></i></button>
-                            </div>
-                        </div>
-
-                    </div>
-
                 </div> -->
-                <!-- END -->
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="height:22vh;margin-top: 10px;">
-                    <div class="card-body text-center ">
-                        <div class="searching_label">
-                            <img src="img/plane_loader.gif" alt="" style="padding-top:20px">
+                <div class="card shadow border-none mb-3"
+                    style="min-height:30vh;margin-top: 30px; border-radius: 22px;position:relative;">
+                    <div class="card-header "
+                        style="height:8vh; background-color: #6fa0ea; border-radius: 22px 22px 0 0;">
+                        <p class="h3 text-start" style="color: black;"><i class="fa-solid fa-plane-departure"
+                                style="padding: 10px 0 0 10px;"></i>&nbsp&nbsp&nbspDeparture</p>
+                    </div>
+                    <div class='searching_label'><img src='img/plane_loader.gif' alt=''
+                            style="position:absolute;top: 50%; left: 40%;"></div>
+                    <div class="fade card-body row justify-content-center align-items-center">
+                        <div class="col-md">
+                            <p class="h1">9:00</p>
+                            <p class="h5">HKG</p>
+                        </div>
+                        <div class="col-md">
+                            <p style='margin: 0;'>4hr</p>
+                            <hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i
+                                class='fa-solid fa-plane'></i>
+                            <p class='text-succes'>Direct</p>
+                        </div>
+                        <div class="col-md">
+                            <p class="h1">14:00</p>
+                            <p class="h5">KIX</p>
+                        </div>
+                        <div class="col-md">
+                            <p class="h6">Estimated Price</p>
+                            <p class="h4">$4,674 HKD</p>
+                            <button type='button' class='btn btn-success btn-lg'
+                                style='padding-left:20px;padding-right:20px;'>Select &nbsp&nbsp<i class='fa-solid
+                                fa-arrow-right'></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="height:22vh;margin-top: 10px;">
-                    <div class="card-body text-center ">
-                        <div class="searching_label">
-                            <img src="img/plane_loader.gif" alt="" style="padding-top:20px">
+
+                <div class="card shadow border-none mb-3"
+                    style="min-height:30vh;margin-top: 30px; border-radius: 30px;position:relative;">
+                    <div class="card-header "
+                        style="height:8vh; background-color: #6fa0ea; border-radius: 30px 30px 0 0;">
+                        <p class="h3 text-start" style="color: black;"><i class="fa-solid fa-plane-departure"
+                                style="padding: 10px 0 0 10px;"></i>&nbsp&nbsp&nbspDeparture</p>
+                    </div>
+                    <div class='searching_label'><img src='img/plane_loader.gif' alt=''
+                            style="position:absolute;top: 50%; left: 40%;"></div>
+                    <div class="fade card-body row justify-content-center align-items-center">
+                        <div class="col-md">
+                            <p class="h1">10:15</p>
+                            <p class="h5">HKG</p>
+                        </div>
+                        <div class="col-md">
+                            <p style='margin: 0;'>4hr15</p>
+                            <hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i
+                                class='fa-solid fa-plane'></i>
+                            <p class='text-succes'>Direct</p>
+                        </div>
+                        <div class="col-md">
+                            <p class="h1">15:30</p>
+                            <p class="h5">KIX</p>
+                        </div>
+                        <div class="col-md">
+                            <p class="h6">Estimated Price</p>
+                            <p class="h4">$4,109 HKD</p>
+                            <button type='button' class='btn btn-success btn-lg'
+                                style='padding-left:20px;padding-right:20px;'>Select &nbsp&nbsp<i class='fa-solid
+                                fa-arrow-right'></i>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="card shadow p-3 mb-5 bg-body rounded" style="height:22vh;margin-top: 10px;">
-                    <div class="card-body text-center ">
-                        <div class="searching_label ">
-                            <img src="img/plane_loader.gif" alt="" style="padding-top:20px">
+                <div class="card shadow border-none mb-3"
+                    style="min-height:30vh;margin-top: 30px; border-radius: 30px;position:relative;">
+                    <div class="card-header "
+                        style="height:8vh; background-color: #6fa0ea; border-radius: 30px 30px 0 0;">
+                        <p class="h3 text-start" style="color: black;"><i class="fa-solid fa-plane-departure"
+                                style="padding: 10px 0 0 10px;"></i>&nbsp&nbsp&nbspDeparture</p>
+                    </div>
+                    <div class='searching_label'><img src='img/plane_loader.gif' alt=''
+                            style="position:absolute;top: 50%; left: 40%;"></div>
+                    <div class="fade card-body row justify-content-center align-items-center">
+                        <div class="col-md">
+                            <p class="h1">12:00</p>
+                            <p class="h5">HKG</p>
+                        </div>
+                        <div class="col-md">
+                            <p style='margin: 0;'>4hr</p>
+                            <hr class='border border-primary border-3 opacity-50' style='margin:5px ;'><i
+                                class='fa-solid fa-plane'></i>
+                            <p class='text-succes'>Direct</p>
+                        </div>
+                        <div class="col-md">
+                            <p class="h1">17:00</p>
+                            <p class="h5">KIX</p>
+                        </div>
+                        <div class="col-md">
+                            <p class="h6">Estimated Price</p>
+                            <p class="h4">$3,866 HKD</p>
+                            <button type='button' class='btn btn-success btn-lg'
+                                style='padding-left:20px;padding-right:20px;'>Select &nbsp&nbsp<i class='fa-solid
+                                fa-arrow-right'></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -117,11 +168,14 @@
             <div class="col">
 
             </div>
+
         </div>
     </div>
     <script>
         var progress = 0
         let invl = null
+
+        loading();
 
         function delay(milliseconds) {
             return new Promise(resolve => {
@@ -129,26 +183,38 @@
             });
         }
 
-        async function progressbar() {
-            progress += 5;
-            document.getElementById("search-progress").style.width = progress + "%";
-            if (progress == 100) {
-                clearInterval(invl);
-                await delay(1500);
-                document.getElementById("bar").style.display = "none";
-                var arr = document.getElementsByClassName("searching_label");
-                for (let i = 0; i < arr.length; i++) {
-                    arr[i].style.display = "none"
-                }
-                LoadData();
-                AddData();
-                AddData();
-                await delay(200)
-                fadein();
+        async function loading() {
+            await delay(2000);
+            var arr = document.getElementsByClassName("searching_label");
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].style.display = "none"
             }
+            await delay(500);
+            fadein();
         }
 
-        invl = setInterval(progressbar, 50);
+        function fadein() {
+            var card_len = document.getElementsByClassName('fade').length;
+            for (let i = 0; i < card_len; i++) {
+                document.getElementsByClassName('fade')[i].style.opacity = "1";
+            }
+        }
+        // async function progressbar() {
+        //     progress += 5;
+        //     document.getElementById("search-progress").style.width = progress + "%";
+        //     if (progress == 100) {
+        //         clearInterval(invl);
+        //         await delay(1500);
+        //         var arr = document.getElementsByClassName("searching_label");
+        //         for (let i = 0; i < arr.length; i++) {
+        //             arr[i].style.display = "none"
+        //         }
+        //         await delay(200)
+        //         fadein();
+        //     }
+        // }
+
+        // invl = setInterval(progressbar, 50);
         // clearInterval(invl);
     </script>
 </body>
