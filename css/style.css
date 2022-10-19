@@ -24,7 +24,7 @@ html {
 #searchbox {
   padding: 15px;
   opacity: 0.95;
-  background-color: #042759;
+  background-color: rgb(71, 98, 121);
   height: 25vh;
   width: 130vh;
   border-radius: 10px;
@@ -42,7 +42,7 @@ html {
 
 #headtext {
   padding-top:15vh;
-  color: #8ab2d0;
+  color: #3d4144;
   font-weight: bolder;
 }
 
