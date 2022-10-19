@@ -17,6 +17,7 @@
     ></script>
     <link rel="stylesheet" href="css/forgot.css" />
     <link rel="stylesheet" href="css/pagestyle.css" />
+    <link rel="stylesheet" href="css/cloud2.css">
     <script src="js/resetPwd.js"></script>
     <script src="js/effect.js"></script>
   </head>
@@ -27,13 +28,21 @@
       <span class="loader-inner"></span>
     </span>
 
-    <section class="vh-100" id="bgimg">
+    <section class="vh-100" id="reg-bgimg">
+      <div id="clouds" style="width: 100%; opacity: 40%;">
+        <div class="cloud x1"></div>
+        <div class="cloud x2"></div>
+        <div class="cloud x3"></div>
+        <div class="cloud x4"></div>
+        <div class="cloud x5"></div>
+      </div>
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-lg-12 col-xl-11">
             <div class="card text-black" id="card" style="border-radius: 25px">
               <div class="card-body p-md-5">
                 <div class="row justify-content-center">
+                  <div id="btl" class="d-flex"><a href="login.html"><button type="button" class="btn btn-outline-dark"><i class="fa-solid fa-chevron-left"></i> Login</button></a></div>
                   <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
                     <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                       Reset Your Password
