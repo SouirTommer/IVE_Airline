@@ -63,7 +63,7 @@ $(document).ready(function() {
                 location.href = 'admin_panel.html';
                 alert("Welcome admin "+name);
             } else{
-                location.href = 'user.html';
+                location.href = 'flight_search.html';
                 alert("Welcome user "+name);
             }
             
