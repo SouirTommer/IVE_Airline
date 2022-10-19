@@ -1,0 +1,258 @@
+body {
+  line-height: 1.65;
+  font-family: 'Calibri';
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+p {
+  color: #7b7b7b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  color: #655e7a;
+}
+
+.btn-main {
+  background: #295770;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 14px 35px;
+  text-transform: uppercase;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+.btn-main:hover {
+  background: #174060;
+  color: #fff;
+}
+
+.section {
+  padding: 100px 0;
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+.section-title {
+  margin-bottom: 70px;
+}
+.section-title h2 {
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.section-title p {
+  font-style: italic;
+  color: #666;
+  font-family: "Volkhov", serif;
+}
+
+.page-title {
+  padding: 100px 0;
+}
+.page-title .block {
+  text-align: center;
+}
+.page-title .block h1 {
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 6px;
+  margin-top: 0;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+@media (max-width: 992px) {
+  .page-title .block h1 {
+    font-size: 32px;
+  }
+}
+.page-title .block p {
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
+.heading {
+  padding-bottom: 60px;
+  text-align: center;
+}
+.heading h2 {
+  color: #000;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+}
+.heading p {
+  font-size: 18px;
+  line-height: 40px;
+  color: #292929;
+  font-weight: 300;
+}
+
+.slider:before,
+.page-title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #254d6e;
+  opacity: 0.8;
+}
+
+header {
+  background: #fff;
+  padding: 20px 0;
+}
+header .navbar {
+  margin-bottom: 0px;
+  border: 0px;
+}
+header .navbar-brand {
+  padding-top: 5px;
+}
+header .navbar-default {
+  background: none;
+  border: 0px;
+}
+header .navbar-default .navbar-nav {
+  padding-top: 10px;
+}
+header .navbar-default .navbar-nav li a {
+  color: #333333;
+  padding: 10px 26px;
+  font-size: 15px;
+}
+header .navbar-default .navbar-nav li a:hover {
+  color: #000;
+}
+
+.slider {
+  background: url("https://www.gstatic.com/travel-frontend/animation/hero/flights_3.svg")
+    no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 10% 0%;
+  padding: 200px 0;
+  position: relative;
+}
+@media (max-width: 992px) {
+  .slider {
+    padding: 150px 0;
+  }
+}
+.slider .block {
+  color: #e3e3e4;
+  text-align: center;
+}
+.slider .block h1 {
+  font-weight: 100;
+  font-size: 45px;
+  line-height: 60px;
+  letter-spacing: 10px;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+}
+@media (max-width: 992px) {
+  .slider .block h1 {
+    font-size: 36px;
+    line-height: 46px;
+  }
+}
+@media (max-width: 768px) {
+  .slider .block h1 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+.slider .block p {
+  margin-bottom: 30px;
+  color: #b9b9b9;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+}
+@media (max-width: 992px) {
+  .slider .block p {
+    font-size: 16px;
+  }
+}
+
+.about .block h2 {
+  padding-top: 35px;
+  margin: 0;
+}
+.about .block p {
+  padding-top: 20px;
+  line-height: 28px;
+}
+.about .block img {
+  width: 100%;
+	border-radius: 5px;
+	transition: .1s;
+  opacity: 0.9;
+	cursor: crosshair;
+}
+
+.about .block img:hover {
+  transform: scale(1.2);
+}
+
+.footer {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer p {
+  font-size: 13px;
+  line-height: 25px;
+  color: #919191;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
