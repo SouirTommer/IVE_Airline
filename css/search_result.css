@@ -1,4 +1,9 @@
-.fade{
+.fade {
     opacity: 0;
     transition: opacity 2s;
+}
+
+.dotted {
+    border-left: 5px dotted black;
+    margin-bottom: -10px;
 }
