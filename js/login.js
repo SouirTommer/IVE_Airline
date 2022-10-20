@@ -55,11 +55,11 @@ $(document).ready(function() {
                 location.href = 'resetPwd.html';
                 alert("It is detected that you are logging in for the first time,\n please reset your password first.");
 
-            } else if(checkstaff(name  == "Staff" )){
+            } else if(checkstaff(name)  == "Staff" ){
                 location.href = 'staff_panel.html';
                 alert("Welcome Staff "+name);
 
-            } else if(checkstaff(name == "Admin")){
+            } else if(checkstaff(name) == "Admin"){
                 location.href = 'admin_panel.html';
                 alert("Welcome admin "+name);
             } else{
