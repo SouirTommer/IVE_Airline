@@ -7,3 +7,10 @@
     border-left: 5px dotted black;
     margin-bottom: -10px;
 }
+
+
+#fade2 {
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
