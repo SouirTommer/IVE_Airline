@@ -83,7 +83,7 @@
                             <p class="h5">2022-10-27 </p>
                         </li>
                         <li class="list-group-item">
-                            <p class="h6">Class :  </p>
+                            <p class="h6">Class : </p>
                             <p class="h5">Economy</p>
                         </li>
                         <li class="list-group-item">
@@ -135,7 +135,8 @@
                         <div class="col-md">
                             <p class="h6">Estimated Price</p>
                             <p class="h4">$4,674 HKD</p>
-                            <button type='button' class='btn btn-success btn-lg' onclick="location.href='search_result_2.html'"
+                            <button type='button' class='btn btn-success btn-lg'
+                                onclick="location.href='search_result_2.html'"
                                 style='padding-left:20px;padding-right:20px; background-color: #104494; border-color: #105194;'>Select
                                 &nbsp&nbsp<i class='fa-solid
                                 fa-arrow-right'></i>
@@ -552,12 +553,12 @@
                         <p class="h5" style="font-weight:bold ;"><i class="fa-solid fa-ticket-simple"></i> Flight
                             <br> Details</p>
                     </div>
-                    <ul class="list-group list-group-flush text-start" id ='fade3'>
+                    <ul class="list-group list-group-flush text-start" id='fade3'>
                         <li class="list-group-item">
                             <p class="h6">Flight no. :</p>
                             <p class="h5"> HKG001</p>
                         </li>
-                        
+
                         <li class="list-group-item">
                             <p class="h6">From : </p>
                             <p class="h5">HKG</p>
@@ -709,6 +710,12 @@
             document.getElementById('fade2').style.opacity = 0;
         }
 
+        var addclass = 'color';
+        var $cols = $('.dataset1,.dataset2,.dataset3').click(function (e) {
+            $cols.removeClass(addclass);
+            $(this).addClass(addclass);
+
+        });
 
         $(".dataset1,.dataset2,.dataset3").click(async function () {
             hidedetail();
@@ -716,7 +723,8 @@
             showdetail();
         });
 
-        
+
+
 
 
 

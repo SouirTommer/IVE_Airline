@@ -57,8 +57,9 @@
                 <div class="card" style="width: 15rem;border-radius: 22px">
                     <div class="card-body"
                         style="background-color:#8da8d1 ;border-radius: 22px 22px 0 0;padding-bottom: 0;">
-                        <p class="h5" style="font-weight:bold ;"><i class="fa-solid fa-ticket-simple"></i>  Search request
-                            
+                        <p class="h5" style="font-weight:bold ;"><i class="fa-solid fa-ticket-simple"></i> Search
+                            request
+
                             <br> Details</p>
                     </div>
                     <ul class="list-group list-group-flush text-start">
@@ -83,7 +84,7 @@
                             <p class="h5">2022-10-27 </p>
                         </li>
                         <li class="list-group-item">
-                            <p class="h6">Class :  </p>
+                            <p class="h6">Class : </p>
                             <p class="h5">Economy</p>
                         </li>
                         <li class="list-group-item">
@@ -578,7 +579,7 @@
                             <p class="h6">Remaining Seat </p>
                             <p class="h5"> Economy : 70 <br>Business : 30 <br> First Class : 8</p>
                         </li>
-    
+
 
                     </ul>
                     <div class="card-body" style=" border-top:0;border-radius: 0 0 22px 22px ;">
@@ -707,12 +708,24 @@
             document.getElementById('fade2').style.opacity = 0;
         }
 
+        var addclass = 'color';
+        var $cols = $('.dataset1,.dataset2,.dataset3').click(function (e) {
+            $cols.removeClass(addclass);
+            $(this).addClass(addclass);
+
+        });
 
         $(".dataset1,.dataset2,.dataset3").click(async function () {
             hidedetail();
             await delay(500)
             showdetail();
         });
+
+        $(".dataset1,.dataset2,.dataset3").mouseover(async function () {
+            
+        });
+
+
         // async function progressbar() {
         //     progress += 5;
         //     document.getElementById("search-progress").style.width = progress + "%";
