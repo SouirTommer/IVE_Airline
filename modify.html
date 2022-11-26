@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline | Admin</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/a178411011.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="css/pagestyle.css" />
+    <link rel="stylesheet" href="css/panel.css" />
+    <script src="js/effect.js"></script>
+</head>
+
+<body id="adminbody">
+    <div id="overlayer"></div>
+    <span class="loader">
+        <span class="loader-inner"></span>
+    </span>
+
+
+    <nav class="navbar bg-light">
+        <div class="container justify-content-center" style="height:10vh">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-placeholder.png" alt="Bootstrap" width="auto" height="75">
+            </a>
+        </div>
+    </nav>
+    <section class="vh-30" id="admin-img">
+
+        <nav class="navbar bg-light" style="padding-bottom: 0;">
+            <div class="container-fluid" style="background-color:#144487; height:7vh; ">
+                <a class="navbar-brand" href="record.html"><button type="button"
+                        style="width: 7vh; background-color: #105194; border-color: #105194;" class="btn btn-primary"><i
+                            class="fa-solid fa-chevron-left"></i></button></a>
+                <a class="navbar-brand" href="#.html"><button type="button"
+                        style="width: 5vh; background-color: #105194; border-color: #105194;" class="btn btn-primary"><i
+                            class="fa-regular fa-user"></i></button></a>
+            </div>
+        </nav>
+
+        <div class="container-fluid text-center" style="margin-top: 100px;">
+            <section>
+                <div class="row justify-content-md-center">
+                    <div class="col-12 mt-3 mb-1">
+                        <h1 class="text-uppercase" style="font-weight: bold;">Update Your Flight information</h1>
+                        <p>Manage your flight Booking</p>
+                    </div>
+                    <div class="col-6 mt-3 mb-1">
+                        <div class="card" style="background-color:rgba(10, 59, 76, 0.114); border:none; padding:20px;">
+                            <div class="card-body text-start">
+                                <h3>Flight Information</h3>
+                                <div class="input-group" style="padding-bottom: 20px;">
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault5"
+                                            id="flexRadioDefault5" disabled checked>
+                                        <label class="form-check-label" for="flexRadioDefault5">
+                                            Round Trip
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault5"
+                                            id="flexRadioDefault5" disabled>
+                                        <label class="form-check-label" for="flexRadioDefault5">
+                                            One Way Trip
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="input-group input-group mb-3" style="">
+                                    <span class="input-group-text" id="inputGroup-sizing-md">Inbound Flight Reference
+                                        No.</span>
+                                    <input type="text" class="form-control" value='KIX001' disabled
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div class="input-group input-group mb-3" style="">
+                                    <span class="input-group-text" id="inputGroup-sizing-md">Inbound Flight Reference
+                                        No.</span>
+                                    <input type="text" class="form-control" value='HKG001' disabled
+                                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-text">Date of flight</span>
+                                    <input type="date" aria-label="First name" class="form-control" value="2023-01-16">
+                                    <input type="date" aria-label="Last name" class="form-control" value="2023-01-22">
+                                </div>
+
+                                <div class="input-group" style="padding-top: 20px;">
+
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Economy Class
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            Business Class
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                            id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                            First Class
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card"
+                            style="background-color:rgba(10, 59, 76, 0.114); border:none; padding:20px;margin-top: 50px;">
+                            <div class="card-body text-start">
+                                <h3>Passenger 1 Information</h3>
+                                <form>
+                                    <div class="mb-3">
+
+                                        <div class="input-group">
+                                            <span class="input-group-text">First and last name</span>
+                                            <input type="text" aria-label="First name" value="Wing Cheuk"
+                                                class="form-control">
+                                            <input type="text" aria-label="Last name" value="Yue" class="form-control">
+                                        </div>
+                                        <div class="input-group input-group mb-3" style="padding-top: 20px;">
+                                            <span class="input-group-text" id="inputGroup-sizing-md">Passport No.</span>
+                                            <input type="text" class="form-control" value='KN888888'
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="inputGroup-sizing-md">Seat No.</span>
+                                            <input type="text" class="form-control" value='1A' disabled
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault1" >
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                No Meal Needed
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault2" checked>
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Normal Meal
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault"
+                                                id="flexRadioDefault3">
+                                            <label class="form-check-label" for="flexRadioDefault1">
+                                                Vegan Meal
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="card"
+                            style="background-color:rgba(10, 59, 76, 0.114); border:none; padding:20px; margin-top: 50px;margin-bottom: 50px;">
+                            <div class="card-body text-start">
+                                <h3>Passenger 2 Information</h3>
+                                <form>
+                                    <div class="mb-3">
+                                        <div class="input-group">
+                                            <span class="input-group-text">First and last name</span>
+                                            <input type="text" aria-label="First name" value="Chung Hung"
+                                                class="form-control">
+                                            <input type="text" aria-label="Last name" value="Ching"
+                                                class="form-control">
+                                        </div>
+                                        <div class="input-group input-group mb-3" style="padding-top: 20px;">
+                                            <span class="input-group-text" id="inputGroup-sizing-md">Passport No.</span>
+                                            <input type="text" class="form-control" value='KN999999'
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                        <div class="input-group input-group mb-3">
+                                            <span class="input-group-text" id="inputGroup-sizing-md">Seat No.</span>
+                                            <input type="text" class="form-control" value='1B' disabled
+                                                aria-label="Sizing example input"
+                                                aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                                id="flexRadioDefault4" checked>
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                No Meal Needed
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                                id="flexRadioDefault5">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Normal Meal
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <input class="form-check-input" type="radio" name="flexRadioDefault2"
+                                                id="flexRadioDefault6">
+                                            <label class="form-check-label" for="flexRadioDefault2">
+                                                Vegan Meal
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+                                </form>
+                            </div>
+                        </div>
+                        <div>
+                            <div style='margin-bottom: 7vh; margin-right: 5vh;' type="#" class="btn btn-primary"
+                                onclick="update()">Request
+                                Update
+                            </div>
+                            <div style='margin-bottom: 7vh;' type="#" class="btn btn-danger" onclick="update()">Request
+                                Cancel
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </section>
+    <script>
+        function update() {
+            alert('Upate Requset has been Sent');
+            location.href = 'record.html'
+        }
+    </script>
+</body>
+
+</html>

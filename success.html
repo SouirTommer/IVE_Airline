@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline | Book Your Flight Ticket Now!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/a178411011.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="css/pagestyle.css" />
+    <link rel="stylesheet" href="css/search_result.css" />
+    <link rel="stylesheet" href="css/cloud.css" />
+    <link rel="stylesheet" href="css/purchasing.css" />
+    <script src="js/effect.js"></script>
+    <script src="js/flight_search.js"></script>
+</head>
+
+<body onload="search_flight()">
+    <div id="overlayer"></div>
+    <span class="loader">
+        <span class="loader-inner"></span>
+    </span>
+
+    <nav class="navbar bg-light">
+        <div class="container justify-content-center" style="height:10vh">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-placeholder.png" alt="Bootstrap" width="auto" height="75">
+            </a>
+        </div>
+    </nav>
+
+    <nav class="navbar bg-light" style="padding-bottom: 0;">
+        <div class="container-fluid" style="background-color:#144487; height:7vh; ">
+            <a class="navbar-brand" href="flight_search.html"><button type="button"
+                    style="width: 7vh; background-color: #105194; border-color: #105194;" class="btn btn-primary"><i
+                        class="fa-solid fa-chevron-left"></i></button></a>
+            <a class="navbar-brand" href="flight_search.html"><button type="button"
+                    style="width: 5vh; background-color: #105194; border-color: #105194;" class="btn btn-primary"><i
+                        class="fa-regular fa-user"></i></button></a>
+        </div>
+    </nav>
+
+    <div id="cloudback" class="container-fluid text-center" style="background-color: #c9dbe9; padding:0 ; ">
+        <div class="row" style="height:auto;">
+            <div id="clouds">
+                <div class="cloud x1"></div>
+                <div class="cloud x2"></div>
+                <div class="cloud x3"></div>
+                <div class="cloud x4"></div>
+                <div class="cloud x5"></div>
+            </div>
+            <div class="col"></div>
+            <div class="col-md-5">
+
+                <div class="card shadow border-none mb-3 text-center justify-content-center"
+                    style="min-height:30vh;margin-top: 15vh; border-radius: 22px;position:relative; background-color: rgba(255, 255, 255, 0.8);">
+                    <div id="loading">
+                        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                    <div id="loaded" style="display:none;opacity: 0; transition: opacity 1.5s;padding-top: 50px;">
+                        <h1><i class="fa-solid fa-check"></i> Payment Success ! </h1>
+                        <h4>Your Earned <i class="fa-solid fa-mill-sign"></i><b> 4133 IVE miles </b>from this trip!</h4>
+                        <h4>After the Tickets has been Confirmed, You will received an Email.</h4>
+                        <div style="padding:30px"><button type="button" class="btn btn-primary" onclick="location.href='record.html'">OK</button></div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+    <script>
+        var progress = 0
+        let invl = null
+        loading();
+
+        function delay(milliseconds) {
+            return new Promise(resolve => {
+                setTimeout(resolve, milliseconds);
+            });
+        }
+
+        async function loading() {
+            await delay(5000);
+            document.getElementById('loading').style.display = 'none'
+            await delay(500);
+            fadein();
+        }
+
+        async function fadein() {
+            document.getElementById('loaded').style.display = '';
+            await delay(500);
+            document.getElementById('loaded').style.opacity = 1;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airline | Book Your Flight Ticket Now!</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/a178411011.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jslib/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" href="css/pagestyle.css" />
+    <link rel="stylesheet" href="css/search_result.css" />
+    <link rel="stylesheet" href="css/cloud.css" />
+    <link rel="stylesheet" href="css/purchasing.css" />
+    <script src="js/effect.js"></script>
+    <script src="js/flight_search.js"></script>
+</head>
+
+<body onload="search_flight()">
+    <div id="overlayer"></div>
+    <span class="loader">
+        <span class="loader-inner"></span>
+    </span>
+
+    <nav class="navbar bg-light">
+        <div class="container justify-content-center" style="height:10vh">
+            <a class="navbar-brand" href="index.html">
+                <img src="img/logo-placeholder.png" alt="Bootstrap" width="auto" height="75">
+            </a>
+        </div>
+    </nav>
+
+    <nav class="navbar bg-light" style="padding-bottom: 0;">
+        <div class="container-fluid" style="background-color:#144487; height:7vh; ">
+            <a class="navbar-brand" href="checkout.html"><button type="button"
+                    style="width: 7vh; background-color: #105194; border-color: #105194;" class="btn btn-primary"><i
+                        class="fa-solid fa-chevron-left"></i></button></a>
+            <a class="navbar-brand" href="record.html"><button type="button"
+                    style="width: 5vh; background-color: #105194; border-color: #105194;" class="btn btn-primary"><i
+                        class="fa-regular fa-user"></i></button></a>
+        </div>
+    </nav>
+
+    <div id="cloudback" class="container-fluid text-center" style="background-color: #c9dbe9; padding:0 ; ">
+        <div class="row" style="height:auto;">
+            <div id="clouds">
+                <div class="cloud x1"></div>
+                <div class="cloud x2"></div>
+                <div class="cloud x3"></div>
+                <div class="cloud x4"></div>
+                <div class="cloud x5"></div>
+            </div>
+
+            <div class="col"></div>
+            <div class="col-md-5">
+                <div class="card shadow border-none mb-3"
+                    style="min-height:30vh;margin-top: 30px; border-radius: 22px;position:relative; background-color: rgba(255, 255, 255, 0.8);padding: 20px;">
+                    <h1>Payment</h1>
+                    <h2><br><i class="fa-solid fa-cart-shopping"></i> $ 9012</h2><br>
+                    
+                    <form>
+                        <div class="form-group row info">
+                            <label for="inputName3" class="col-sm-2 col-form-label">
+                                <h5>First Name</h5>
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="name" class="form-control" id="inputName3"
+                                    placeholder="First Name / Given Name">
+                            </div>
+                        </div>
+                        <div class="form-group row info">
+                            <label for="inputName4" class="col-sm-2 col-form-label">
+                                <h5>Last Name</h5>
+                            </label>
+                            <div class="col-10">
+                                <input type="name" class="form-control" id="inputName4"
+                                    placeholder="Last Name / Family Name">
+                            </div>
+                        </div>
+                        <div class="form-group row info">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">
+                                <h5>Email</h5>
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputPassword3" placeholder="Email">
+                            </div>
+                        </div>
+                        <fieldset class="form-group info">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">
+                                    <h5>Card Info</h5>
+                                </legend>
+                                <div class="col-sm-10 text-start">
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                            value="option1">
+                                        <label class="form-check-label" for="gridRadios1">
+                                            <h5><i class="fa-brands fa-cc-visa"></i> Visa</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                            value="option2">
+                                        <label class="form-check-label" for="gridRadios2">
+                                            <h5><i class="fa-brands fa-cc-mastercard"></i> Master Card</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                            value="option3">
+                                        <label class="form-check-label" for="gridRadios3">
+                                            <h5><i class="fa-brands fa-cc-amex"></i> American Express</h5>
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios4"
+                                            value="option4">
+                                        <label class="form-check-label" for="gridRadios4">
+                                            <h5><i class="fa-brands fa-cc-jcb"></i> JCB </h5>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row info">
+                            <label for="inputName3" class="col-sm-2 col-form-label">
+                                <h5>Card Number</h5>
+                            </label>
+                            <div class="col-sm-10">
+                                <input type="name" class="form-control" id="inputName3"
+                                    placeholder="XXXX-XXXX-XXXX-XXXX">
+                            </div>
+                        </div>
+                        <div class="form-group row info">
+                            <label for="inputName3" class="col-sm-2 col-form-label">
+                                <h5>Expiry Date</h5>
+                            </label>
+                            <div class="col-sm-2">
+                                <input type="name" class="form-control" id="inputName3" placeholder="MM">
+                            </div>
+                            <div class="col-sm-2">
+                                <input type="name" class="form-control" id="inputName3" placeholder="YY">
+                            </div>
+                            <label for="inputName3" class="col-sm-2 col-form-label">
+                                <h5>CVC</h5>
+                            </label>
+                            <div class="col-sm-2">
+                                <input type="name" class="form-control" id="inputName3" placeholder="XXX">
+                            </div>
+                        </div>
+                        <div class="form-group row" style="padding:30px">
+                            <div class="col-sm-12">
+                                <input type="" value='Confirm' class="btn btn-primary" onclick="location.href='success.html'">
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+    </script>
+</body>
+
+</html>

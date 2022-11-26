@@ -42,6 +42,15 @@
             <a class="navbar-brand" href="#">
                 <img src="img/logo-placeholder.png" alt="Bootstrap" width="auto" height="75">
             </a>
+            <div style="position: fixed; left:90%;"><a class="navbar-brand" href="record.html"><button type="button"
+                        style="width: 5vh; background-color: #155ea677; border-color: #b2cae253;"
+                        class="btn btn-primary"><i class="fa-regular fa-user"></i></button></a></div>
+
+            <div style="position: fixed; left:85%;"><a class="navbar-brand" href="#.html"><button type="button"
+                        style="width: 5vh; background-color: #155ea677; border-color: #b2cae253;"
+                        class="btn btn-primary"><i class="fa-solid fa-bag-shopping"></i></button></a></div>
+
+
     </nav>
 
     <div id="cloudback" class="container-fluid text-center" style="background-color: #c9dbe9; padding :20px; ">
@@ -112,13 +121,53 @@
 
                             </div>
                         </div>
-                        <div class="col-12 text-end" style="padding-top:4vh ;padding-right:30px; padding-bottom :20px;">
-                            <div class="items" id="flight-search">
-                                <button type="button" class="btn btn-success" onclick="clickSearch()">Search flights<i
-                                        class="fa-solid fa-arrow-right" style="padding-left:10px"></i>
-                                </button>
-                            </div>
+                        <div class="row"
+                            style="padding-left:10px;padding-top:5px;padding-right:10px;padding-bottom:;font-size: small;">
+                            <span class="col-1" style="color:white">Adult</span>
+                            <span class="col-1" style="color:white">Child</span>
+                            <span class="col-1" style="color:white">Class</span>
+                            <span class="col" style="color:white"></span>
                         </div>
+                        <div class="row" style="padding-top:10px;padding-left:10px;padding-right:10px">
+                            <div class="input-group col-12">
+
+                                <form class="col-1" action="#" autocomplete="off" style="position:relative">
+                                    <div id="input1">
+                                        <input type="number" id="from-flight-input-autocomplete" aria-label="from"
+                                            class="form-control basicAutoComplete" placeholder="" value="0" min="0"
+                                            max="5" style="border-radius: 5px 0px 0px 5px;" list="airportList">
+                                        </input>
+                                    </div>
+
+                                    <ul class=" list" id="fromlist"></ul>
+                                </form>
+
+                                <form class="col-1" action="#" autocomplete="off" style="position:relative">
+                                    <div id="input2">
+                                        <input type="number" id="to-flight-input-autocomplete" aria-label="to"
+                                            class="form-control basicAutoComplete" placeholder="" value="0" min="0"
+                                            max="5" style="border-radius: 0px 5px 5px 0px">
+                                    </div>
+                                    <ul class="list" id="tolist"></ul>
+                                </form>
+                                <div class="col-4"><select class="form-select" aria-label="Default select example">
+                                        <option value="0" disabled selected>Select Your Class</option>
+                                        <option value="1">Economy Class</option>
+                                        <option value="2">Business Class</option>
+                                        <option value="3">First Class</option>
+                                    </select></div>
+                                <div class="col-6 text-end"
+                                    style="padding-top:10px ;padding-right:30px; padding-bottom :20px;">
+                                    <div class="items" id="flight-search">
+                                        <button type="button" class="btn btn-success" onclick="clickSearch()">Search
+                                            flights<i class="fa-solid fa-arrow-right" style="padding-left:10px"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
                 </div>
             </div>
